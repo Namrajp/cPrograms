@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct person {
+    char name[100];
+    int age;
+    } people[5];
+
+int main(void) {
+  struct person people[5] = {{"John", 32}, {"Jane", 28}, {"Doe", 45}, {"Alice", 30}, {"Bob", 25}};
+
+  for (int i = 0; i <= 5; i++) {
+    printf("People list: Name:%s \t Age: %d\n", people[i].name, people[i].age);
+  }
+  // printf("Hello, World!\n");
+}
