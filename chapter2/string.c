@@ -8,7 +8,7 @@ int main(void) {
     char *sonName = "Nitin";
 
     printf("Names among us are: %s\t %s\t%s\n", myName, name, sonName);
-    printf("Length of myName is: %u\n", strlen(myName));
+    printf("Length of myName is: %i\n", strlen(myName));
 
     printf("Join of myName and Nitin is: %s\n", strcat(myName, sonName));
     // strcpy(myName, sonName);  // Segmentation fault as size of string donot match

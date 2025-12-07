@@ -21,6 +21,13 @@ int main()
 	printf("Number of lines, words and characters: %d %d %d\n",nl,nw,nc);
 }
 /*
+typing start t
+typing end ctrl-d (twice) command to end input
+Output:
+Number of lines, words and characters: 1 2 12
+
+explanation: or debugging purpose
+When you type 't' followed by a space and then press Ctrl-D (EOF), the
 
 typing start t
 nc = 1 // ++nc;
@@ -39,5 +46,4 @@ second if skipped
 else if executed
 nw = 1 step state = IN;
 typing end space
-
 */
