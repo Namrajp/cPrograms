@@ -21,13 +21,11 @@ struct {
 } anon_struct = {0, 1};
 
 int main(void) {
-
-
     printf("Point coordinates: x=%d, y=%d \n", p1.x, p1.y);
-    printf("Point coordinates as integers: x=%d, y=%d \n", (int) p1.x, (int) p1.y);
+    printf("Point coordinates as double: x=%d, y=%d \n", (double) p1.x, (double) p1.y);
     printf("It's my anonymous struct values!:  %d, %d \n",  anon_struct.y, anon_struct.z);
     for(int i=0; i<3; i++) {
-        printf("It's my 0 and 1 and random values!  %d, %d \n", points[i].x, points[i].y);
+        printf("It's array as a structure!  %d, %d \n", points[i].x, points[i].y);
     }
 
     printf("Either No or Yes: %d , %d \n", No, Yes);
