@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    char *str = "Hello!";
+    char *str = "Hi!";
     printf("%s\n", str);
     printf("%c\n", str[0]);
 
@@ -11,6 +11,13 @@ int main() {
     char *ptr = str; // Correctly assign str to ptr
     printf("%p\n", str);
     printf("%p\n", ptr);
+    printf("%p\n", &str[0]); // points to 'H'
+    printf("%c\n", str[0]); // prints 'H'
+
+    printf("%p\n", &str[1]); // points to 'i'
+    printf("%p\n", &str[2]); // points to '!'
+    printf("%p\n", &str[3]); // points to null terminator
+
     return 0;
 }
 
