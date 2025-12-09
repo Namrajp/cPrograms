@@ -10,7 +10,8 @@ int main() {
     scanf("%s",s); // segmentation fault if no malloc or s[number]
 
     char *t = malloc(strlen(s) + 1); // need chunk of memory to copy
-
+    // +1 for the null character
+    
     // for (int i = 0, n = strlen(s) + 1; i < n; i++) {
     //     t[i] = s[i];
     // }
