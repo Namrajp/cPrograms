@@ -1,0 +1,29 @@
+debug c using gdb
+
+sudo apt install gdb
+
+gcc main.c -o main.out -g
+
+gdb main.out
+
+commands
+
+list
+break 16 # add breakpoint at line 16
+disassemble main  # assembly code 
+run
+
+print start
+print end
+continue
+
+at breakpoint :
+
+step
+step 
+print step
+continue
+
+delete 1 # delete breakpoint 1
+
+break 17 

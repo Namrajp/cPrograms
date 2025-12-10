@@ -15,8 +15,10 @@ int main() {
     printf("%c\n", str[0]); // prints 'H'
 
     printf("%p\n", &str[1]); // points to 'i'
-    printf("%p\n", &str[2]); // points to '!'
-    printf("%p\n", &str[3]); // points to null terminator
+    printf("%c\n", (str[2]));
+    printf("%p\n", &str[2]);
+    printf("%c\n", str[3]); // points to '\0', equals to 0 or null pointer or blank line
+    printf("%p \n", &str[3]); // points to null terminator
 
     return 0;
 }
