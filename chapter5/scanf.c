@@ -5,7 +5,7 @@
 int main() {
 
     char s[6];
-    printf("s: ");
+    printf("only a character integer please: ");
 
     do {
         scanf("%s", s);
