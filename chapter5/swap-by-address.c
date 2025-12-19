@@ -15,9 +15,10 @@ int main()
 {
 	int a = 6;
 	int b = 4;
+	printf("Value of a: %i Value of b: %i\n",a, b);
 	swap(&a,&b);
-	printf("Value of a: %d\n",a);
-	printf("Value of b: %d\n",b);
+	printf("Value of a: %i Value of b: %i\n",a, b);
+
 	return 0;
 }
 

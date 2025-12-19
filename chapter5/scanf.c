@@ -55,14 +55,18 @@ int get_int(void) {
 	return i;
 }
 
-// char* get_string(void) {
-// 	char *s;
-// 	s = malloc(40 * sizeof(char));
-// 	printf("String: ");
-// 	scanf("%s\n", s);
-// 	free(s);
-// 	return s;
-// }
+char* get_string(void) {
+	char *s;
+	s = malloc(40 * sizeof(char));
+	if (s == NULL) {
+		return;
+	}
+	printf("String: ");
+		scanf("%s\n", s);
+	
+	// free(s);
+	return s;
+}
 
 float get_float(void) {
 	float f;
