@@ -5,7 +5,7 @@ int main()
 {
     int *number;
     number =  malloc(3 * sizeof(int));
-    // int number[3];
+    // int number[3]; replaces three lines 6,7 and 23 free memory
 
     if (number == NULL)
     {

@@ -15,39 +15,43 @@ int main() {
 	float decimal = get_float();
 	printf("You decimal number is: %f\n", decimal);
 
-	char *str = get_string();
-	printf("Your string is: %s\n", str);
-
-
-
-
-    // char s[6];
-    // printf("only a character integer please: ");
-
-    // do {
-    //     scanf("%s", s);
-    // } while (!isdigit(*s)) ;
-    
-      
-
-
-    // printf("s: %s\n", s);
-
-    // char *top;
-    // top = malloc(6 * sizeof(char));
-    // printf("Please type top letter: ");
-    // scanf("%s", top);
-    // printf("%s\n", top);
-
-    // double *pi = malloc(sizeof(double));
-    // printf("what is value of pi: \n");
-
-    // scanf("%lf", pi);
-    // printf("%0.8lf\n", *pi);
-    // free(top);
+	char *name = get_string();
+	if (name != NULL) {
+		printf("Hello, %s\n", name);
+		printf("Your name is: %s\n", name);
+		free(name);
+	} else {
+		return 1;
+	}
+	// free(s);
 }
 
-// Ask user for integer input
+char* get_string(void) {
+	char *s;
+	s = malloc(40 * sizeof(char));
+	if (s == NULL) {
+		return NULL;
+	}
+	// printf("String: ");
+
+	printf("What is your name? ");
+	// scanf("%s\n", s);
+	
+	int c; int length = 0;
+	while ((c = getchar()) != '\n' && c != EOF){
+		char *new_buf = realloc(s, 80 * sizeof(char));
+			if (new_buf == NULL) {
+				free(s);
+				return NULL;
+				}
+			s = new_buf;
+			
+			s[length++] = c;
+		}
+		s[length] = '\0';
+	return s;
+ }
+	// Ask user for integer input
 int get_int(void) {
 	int i;
 	printf("Integer: ");
@@ -55,18 +59,7 @@ int get_int(void) {
 	return i;
 }
 
-char* get_string(void) {
-	char *s;
-	s = malloc(40 * sizeof(char));
-	if (s == NULL) {
-		return;
-	}
-	printf("String: ");
-		scanf("%s\n", s);
-	
-	// free(s);
-	return s;
-}
+
 
 float get_float(void) {
 	float f;
@@ -76,7 +69,12 @@ float get_float(void) {
 }
 // Ask user for string input
 
+	// // free(s);
+	// return s;
+	
+	// char s[100];
 
+    // fgets(s, sizeof(s), stdin);
 
 //    char s[4]; also works n memory in array.
 // segmentation fault if no memory is allocated in char pointer.
