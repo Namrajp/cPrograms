@@ -27,6 +27,9 @@ int main() {
 }
 
 char* get_string(void) {
+	int c; 
+	int length = 0;
+	int capacity = 16;
 	char *s;
 	s = malloc(40 * sizeof(char));
 	if (s == NULL) {
@@ -36,19 +39,24 @@ char* get_string(void) {
 
 	printf("What is your name? ");
 	// scanf("%s\n", s);
-	
-	int c; int length = 0;
-	while ((c = getchar()) != '\n' && c != EOF){
-		char *new_buf = realloc(s, 80 * sizeof(char));
-			if (new_buf == NULL) {
-				free(s);
-				return NULL;
-				}
-			s = new_buf;
-			
-			s[length++] = c;
+	// && causes short circuiting if user press enter, exits loop
+
+	while ((c = getchar()) != '\n' && c != EOF)
+	{
+		if (length +1 >= capacity)
+		{
+			capacity *= 2;
+			char *new_buf = realloc(s, 16 * sizeof(char));
+				if (new_buf == NULL) {
+					free(s);
+					return NULL;
+					}
+				s = new_buf;
+				
+				s[length++] = c;
 		}
-		s[length] = '\0';
+	}
+	s[length] = '\0';
 	return s;
  }
 	// Ask user for integer input
