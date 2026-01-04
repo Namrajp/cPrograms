@@ -14,6 +14,13 @@ int main() {
 
     printf("Name: %s\n", person1.name);
     printf("Address: %s\n", person1.address);
+
+    Person person2;
+    person2.name = "Nawaraj";
+    person2.address = "123 main st, Sydney";
+    
+    printf("Name: %s\n", person2.name);
+    printf("Address: %s\n", person2.address);
 }
 
 // Explanation:

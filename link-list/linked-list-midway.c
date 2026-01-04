@@ -24,7 +24,7 @@ int main()
     list = tmp; 
     // copy address of t to list. so, list points first node.
 
-    // Add another number to list, no need to redclare temp
+    // Add another number to list, no need to redeclare temp
     tmp = malloc(sizeof(node));
     if (tmp == NULL)
     {
