@@ -39,9 +39,9 @@ char* get_string(void) {
 
 	printf("What is your name? ");
 	// scanf("%s\n", s);
-	// && causes short circuiting if user press enter, exits loop
-
+	
 	while ((c = getchar()) != '\n' && c != EOF)
+	// && causes short circuiting if user press enter, exits loop
 	{
 		if (length +1 >= capacity)
 		{
