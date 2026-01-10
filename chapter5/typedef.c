@@ -25,5 +25,6 @@ int main() {
 
 // Explanation:
 // In this code, we define a typedef 'string' as a pointer to char.
-// We then create a struct 'Person' that uses this typedef for its members.
+// We then create a struct 'Person'  aka defined type Person,that uses this typedef keyword
+// and name and address for its members.
 // This allows us to easily manage string data within the struct.   
