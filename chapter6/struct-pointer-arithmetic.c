@@ -8,7 +8,8 @@ struct {
 
 int main(void) {
     p = malloc(sizeof(*p)); // allocate memory for the struct
-    //  p = {6,"hello"};// invalid: p is a pointer to an unnamed struct type. To use {6, "hello"}, you would need an actual struct object to assign to
+    //  p = {6,"hello"};// invalid: p is a pointer to an unnamed struct type.
+    // To use {6, "hello"}, you would need an actual struct object to assign to
     // struct point = {6,"hello"}; // invalid
     p->len = 6;
     p->str = "hello";   // means: (*p).str
