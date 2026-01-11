@@ -19,7 +19,7 @@ int main() {
     struct Person *person1;
     person1  = malloc(sizeof(*person1));
 
-    // struct Person person1 = {"Alice", 30};
+    // struct Person person1 = {"Alice", 30}; // invalid
     // person1 = {"Kevin", 50}; //invalid because person1 is a pointer to struct Person type.
     person1->name = "Sakuni";
     person1->age = 55;
