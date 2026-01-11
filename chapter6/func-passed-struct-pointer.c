@@ -12,7 +12,7 @@ void updateAge(struct Person *p) {
 }
 
 int main() {
-    struct Person person1 = {"Alice", 30};
+    struct Person person1 = {"Subhadra", 40};
 
     printf("Before: %s is %d years old\n", person1.name, person1.age);
 
