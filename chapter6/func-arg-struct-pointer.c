@@ -9,7 +9,7 @@ struct Person {
 
 // Function that takes a pointer to a struct
 void updateAge(struct Person *p) {
-    ++p->age;   // Modify struct via pointer
+    ++p->age;   // Modify struct via pointer or *p.age += 1
 }
 
 int main() {
