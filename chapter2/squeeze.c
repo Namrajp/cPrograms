@@ -5,7 +5,7 @@ void squeeze(char s[], int c);
 
 int main(void)
 {
-    char r[] = {'c','a','t','i','s'};
+    char r[] = "catisoutoncar";
    squeeze(r, 'c');
 
     for (int m = 0; m < strlen(r); m++)
