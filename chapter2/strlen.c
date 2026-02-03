@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 int strlen(char mystr[]);
-main() 
+int main(void) 
 {
 	printf("Length: %d\n",strlen("Hello World!"));
 	return 0;
